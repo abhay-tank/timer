@@ -66,7 +66,6 @@ const startTimer = () => {
     if (time.hours >= 24) {
       resetTimer();
     }
-    console.log(time);
     let hr = String(time.hours).padStart(2, "0");
     let min = String(time.minutes).padStart(2, "0");
     let sec = String(time.seconds).padStart(2, "0");
