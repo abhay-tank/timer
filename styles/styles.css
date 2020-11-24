@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ffba93;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stop-watch-container {
+  height: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1a5e63;
+  border: 5px solid #222831;
+  border-radius: 1rem;
+  color: #00bfb2;
+  font-family: "Bungee Shade", cursive;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+  font-size: 3rem;
+  text-align: center;
+  text-justify: distribute-all-lines;
+}
+
+.time-container {
+  height: 100%;
+  display: inherit;
+  align-items: center;
+}
+
+.buttons-container {
+  display: inherit;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightcoral;
+  border: inherit;
+  font-size: 1rem;
+  width: 100%;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.buttons-container img {
+  padding: 1rem;
+  cursor: pointer;
+  height: 3rem;
+}
+
+.disable {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+@media screen and (max-width: 1100px) {
+  .stop-watch-container {
+    font-size: 2rem;
+  }
+}

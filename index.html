@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="stop-watch-container">
+        <div class="time-container">
+          <h1 id="displayTime"></h1>
+        </div>
+        <div class="buttons-container">
+          <img
+            id="startTimerButton"
+            src="./images/start.svg"
+            onclick="startTimer()"
+            alt="start timer"
+          />
+          <img
+            id="pauseTimerButton"
+            src="./images/pause.svg"
+            onclick="pauseTimer()"
+            alt="pause timer"
+          />
+          <img
+            id="resetTimerButton"
+            src="./images/reset.svg"
+            onclick="resetTimer()"
+            alt="reset timer"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./src/app.js" type="module"></script>
+  </body>
+</html>
