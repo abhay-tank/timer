@@ -36,8 +36,14 @@ body {
 
 .time-container {
   height: 100%;
-  display: inherit;
+  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.time-container h1 {
+  margin: 0.5rem;
 }
 
 .buttons-container {
@@ -64,8 +70,40 @@ body {
   filter: grayscale(100%);
 }
 
+.units {
+  display: none;
+}
+
+.separator {
+  font-size: 4rem;
+}
+
 @media screen and (max-width: 1100px) {
+  .units {
+    display: inline;
+  }
+
+  .separator {
+    display: none;
+  }
+  .time-container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .stop-watch-container {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stop-watch-container {
+    width: auto;
+  }
+
+  .time-container h1 * {
+    display: block;
   }
 }

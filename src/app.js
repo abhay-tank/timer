@@ -5,7 +5,9 @@ let time = {
 };
 
 let stopWatchInterval;
-const displayTime = document.getElementById("displayTime");
+const hrsContainer = document.getElementById("hrs");
+const minsContainer = document.getElementById("mins");
+const secsContainer = document.getElementById("secs");
 const startTimerButton = document.getElementById("startTimerButton");
 const pauseTimerButton = document.getElementById("pauseTimerButton");
 const resetTimerButton = document.getElementById("resetTimerButton");
@@ -18,7 +20,9 @@ window.onload = () => {
   let hr = String(time.hours).padStart(2, "0");
   let min = String(time.minutes).padStart(2, "0");
   let sec = String(time.seconds).padStart(2, "0");
-  displayTime.innerHTML = `${hr} : ${min} : ${sec}`;
+  hrsContainer.innerHTML = hr;
+  minsContainer.innerHTML = min;
+  secsContainer.innerHTML = sec;
   pauseTimerButton.classList.add("disable");
   resetTimerButton.classList.add("disable");
 };
@@ -47,7 +51,9 @@ const resetTimer = () => {
   let hr = String(time.hours).padStart(2, "0");
   let min = String(time.minutes).padStart(2, "0");
   let sec = String(time.seconds).padStart(2, "0");
-  displayTime.innerHTML = `${hr} : ${min} : ${sec}`;
+  hrsContainer.innerHTML = hr;
+  minsContainer.innerHTML = min;
+  secsContainer.innerHTML = sec;
 };
 
 const startTimer = () => {
@@ -69,7 +75,9 @@ const startTimer = () => {
     let hr = String(time.hours).padStart(2, "0");
     let min = String(time.minutes).padStart(2, "0");
     let sec = String(time.seconds).padStart(2, "0");
-    displayTime.innerHTML = `${hr} : ${min} : ${sec}`;
+    hrsContainer.innerHTML = hr;
+    minsContainer.innerHTML = min;
+    secsContainer.innerHTML = sec;
     time.seconds++;
   }, 1000);
 };
